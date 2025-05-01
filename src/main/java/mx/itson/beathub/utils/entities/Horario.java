@@ -10,4 +10,8 @@ package mx.itson.beathub.utils.entities;
  */
 public class Horario {
     
+    private int id_harario = 0;
+    private String fecha = new String();
+    private String horarioInicio = new String();
+    private String horarioFin = new String();
 }

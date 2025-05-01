@@ -10,6 +10,7 @@ package mx.itson.beathub.utils.entities;
  */
 public class Paciente {
     
+    private int id_paciente = 0;
     private String nombre = new String();
     private String alergias = new String();
     private String edad = new String();
@@ -21,6 +22,14 @@ public class Paciente {
     private boolean estado = false ;
     
     public Paciente() {
+    }
+    
+    public int getId_paciente() {
+        return id_paciente;
+    }
+
+    public void setId_paciente(int id_paciente) {
+        this.id_paciente = id_paciente;
     }
 
     public String getNombre() {
