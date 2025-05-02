@@ -2,7 +2,7 @@
 package mx.itson.beathub.persistence;
 
 import mx.itson.beathub.utils.HibernateUtil;
-import mx.itson.beathub.utils.entities.Cita;
+import mx.itson.beathub.entities.Cita;
 import org.hibernate.Session;
 
 /**
