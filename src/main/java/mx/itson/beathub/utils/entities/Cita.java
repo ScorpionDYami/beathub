@@ -17,6 +17,21 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 public class Cita {
+    
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id_cita = 0;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_paciente")
+    private Paciente paciente = new Paciente();
+    @ManyToOne
+    @JoinColumn(name = "id_medico")
+    private Medico medico;
+    @ManyToOne
+    @JoinColumn(name = "id_horario")
+    private Horario horario = new Horario();
 
     /**
      * @return the medico
@@ -31,19 +46,6 @@ public class Cita {
     public void setMedico(Medico medico) {
         this.medico = medico;
     }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_cita = 0;
-    
-    @ManyToOne
-    @JoinColumn(name = "id_paciente")
-    private Paciente paciente = new Paciente();
-    @ManyToOne
-    @JoinColumn(name = "id_medico")
-    private Medico medico;
-    private Horario horario = new Horario();
-    
 
     public Cita() {
     }
