@@ -18,7 +18,7 @@ public class Horario {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_harario = 0;
+    private int id_horario = 0;
     private String fecha = new String();
     private String horarioInicio = new String();
     private String horarioFin = new String();
@@ -26,15 +26,15 @@ public class Horario {
     /**
      * @return the id_harario
      */
-    public int getId_harario() {
-        return id_harario;
+    public int getId_horario() {
+        return id_horario;
     }
 
     /**
      * @param id_harario the id_harario to set
      */
-    public void setId_harario(int id_harario) {
-        this.id_harario = id_harario;
+    public void setId_horario(int id_horario) {
+        this.id_horario = id_horario;
     }
 
     /**

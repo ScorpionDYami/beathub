@@ -111,4 +111,9 @@ public class Paciente {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
+    
+    @Override
+    public String toString() {
+        return nombre;
+    }
 }
