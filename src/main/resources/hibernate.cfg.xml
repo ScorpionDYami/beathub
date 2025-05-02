@@ -22,5 +22,10 @@
             Scorpion/2601
         </property>
         
+        <mapping class = "mx.itson.beathub.entities.Cita"/>
+        <mapping class = "mx.itson.beathub.entities.Especialidad"/>
+        <mapping class = "mx.itson.beathub.entities.Horario"/>
+        <mapping class = "mx.itson.beathub.entities.Medico"/>
+        <mapping class = "mx.itson.beathub.entities.Paciente"/>
     </session-factory>
 </hibernate-configuration>
