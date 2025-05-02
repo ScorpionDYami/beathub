@@ -4,12 +4,20 @@
  */
 package mx.itson.beathub.utils.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  *
  * @author lucas
  */
+@Entity
 public class Paciente {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private int id_paciente = 0;
     private String nombre = new String();
     private String alergias = new String();

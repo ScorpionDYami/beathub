@@ -4,14 +4,80 @@
  */
 package mx.itson.beathub.utils.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  *
  * @author lucas
  */
+@Entity
 public class Horario {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_harario = 0;
     private String fecha = new String();
     private String horarioInicio = new String();
     private String horarioFin = new String();
+
+    /**
+     * @return the id_harario
+     */
+    public int getId_harario() {
+        return id_harario;
+    }
+
+    /**
+     * @param id_harario the id_harario to set
+     */
+    public void setId_harario(int id_harario) {
+        this.id_harario = id_harario;
+    }
+
+    /**
+     * @return the fecha
+     */
+    public String getFecha() {
+        return fecha;
+    }
+
+    /**
+     * @param fecha the fecha to set
+     */
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    /**
+     * @return the horarioInicio
+     */
+    public String getHorarioInicio() {
+        return horarioInicio;
+    }
+
+    /**
+     * @param horarioInicio the horarioInicio to set
+     */
+    public void setHorarioInicio(String horarioInicio) {
+        this.horarioInicio = horarioInicio;
+    }
+
+    /**
+     * @return the horarioFin
+     */
+    public String getHorarioFin() {
+        return horarioFin;
+    }
+
+    /**
+     * @param horarioFin the horarioFin to set
+     */
+    public void setHorarioFin(String horarioFin) {
+        this.horarioFin = horarioFin;
+    }
+    
+
 }

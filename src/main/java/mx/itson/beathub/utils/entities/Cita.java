@@ -4,16 +4,46 @@
  */
 package mx.itson.beathub.utils.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 /**
  *
  * @author lucas
  */
+@Entity
 public class Cita {
 
+    /**
+     * @return the medico
+     */
+    public Medico getMedico() {
+        return medico;
+    }
+
+    /**
+     * @param medico the medico to set
+     */
+    public void setMedico(Medico medico) {
+        this.medico = medico;
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_cita = 0;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_paciente")
     private Paciente paciente = new Paciente();
+    @ManyToOne
+    @JoinColumn(name = "id_medico")
+    private Medico medico;
     private Horario horario = new Horario();
-    private Especialidad especialidad = new Especialidad();
+    
 
     public Cita() {
     }
@@ -42,13 +72,6 @@ public class Cita {
         this.horario = horario;
     }
 
-    public Especialidad getEspecialidad() {
-        return especialidad;
-    }
-
-    public void setEspecialidad(Especialidad especialidad) {
-        this.especialidad = especialidad;
-    }
     
     
 }
